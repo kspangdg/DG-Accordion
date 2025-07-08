@@ -34,7 +34,7 @@ class DG_Accordion {
       return;
     }
 
-    this.buttons = this.options.el.querySelectorAll('.accordion_trigger');
+    this.buttons = this.options.el.querySelectorAll('[data-dgaccordion-trigger]');
 
     for (let i = 0; i < this.buttons.length; i++) {
       const button = this.buttons[i] as HTMLButtonElement;
@@ -101,14 +101,5 @@ class DG_Accordion {
       });
     }
   }
-}
-
-// init
-const accordionsElement = document.querySelector('[data-dgaccordion]') as HTMLElement;
-if (accordionsElement) {
-  new DG_Accordion({
-    el: accordionsElement,
-    open_multiple: false,
-  });
 }
 

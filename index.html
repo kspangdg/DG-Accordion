@@ -7,30 +7,40 @@
 <body>
 
     <div class="accordion" data-dgaccordion>
-        <button type="button" aria-expanded="true" class="accordion_trigger" aria-controls="sect1" id="accordion1id">
+        <button type="button" aria-expanded="true" aria-controls="sect1" id="accordion1id" data-dgaccordion-trigger>
             <span class="accordion_title">Personal Information</span>
             <svg class="accordion_icon" viewBox="0 0 12 10" stroke="#000" width="15px" height="15px"><path fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="M3,3 L7,7 L11,3"/></svg>
         </button>
-        <div id="sect1" role="region" aria-labelledby="accordion1id" class="accordion_panel" aria-hidden="false">
+        <div id="sect1" role="region" aria-labelledby="accordion1id" aria-hidden="false" data-dgaccordion-panel>
             <div>test content for section 1</div>
         </div>
-        <button type="button" aria-expanded="false" class="accordion_trigger" aria-controls="sect2" id="accordion2id">
+        <button type="button" aria-expanded="false" aria-controls="sect2" id="accordion2id" data-dgaccordion-trigger>
             <span class="accordion_title">Personal Information</span>
             <svg class="accordion_icon" viewBox="0 0 12 10" stroke="#000" width="15px" height="15px"><path fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="M3,3 L7,7 L11,3"/></svg>
         </button>
-        <div id="sect2" role="region" aria-labelledby="accordion2id" class="accordion_panel" aria-hidden="true">
+        <div id="sect2" role="region" aria-labelledby="accordion2id" aria-hidden="true" data-dgaccordion-panel>
             <div>test content for section 2</div>
         </div>
-        <button type="button" aria-expanded="false" class="accordion_trigger" aria-controls="sect3" id="accordion3id">
+        <button type="button" aria-expanded="false" aria-controls="sect3" id="accordion3id" data-dgaccordion-trigger>
             <span class="accordion_title">Personal Information</span>
             <svg class="accordion_icon" viewBox="0 0 12 10" stroke="#000" width="15px" height="15px"><path fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="M3,3 L7,7 L11,3"/></svg>
         </button>
-        <div id="sect3" role="region" aria-labelledby="accordion3id" class="accordion_panel" aria-hidden="true">
+        <div id="sect3" role="region" aria-labelledby="accordion3id" aria-hidden="true" data-dgaccordion-panel>
             <div>test content for section 3</div>
         </div>
     </div>
 
 <script src="dg_accordion.min.js"></script>
+<script>
+    // init
+    const accordionsElement = document.querySelector('[data-dgaccordion]');
+    if (accordionsElement) {
+        new DG_Accordion({
+            el: accordionsElement,
+            open_multiple: false,
+        });
+    }
+</script>
 </body>
 </html>
 
