@@ -90,7 +90,7 @@ new DG_Accordion({
 
 ### Running the Plugin
 
-After including the `DG_Accordion.js` file, ensure your HTML is set up correctly, and then instantiate the `DG_Accordion` class with your desired options.
+After including the `dg_accordion.min.js` file, ensure your HTML is set up correctly, and then instantiate the `DG_Accordion` class with your desired options.
 
 ### Error Handling
 
